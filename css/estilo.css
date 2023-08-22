@@ -1,0 +1,401 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+/* Criando letras usando o fluxo de trabalho MOBILE FIRTS 
+
+   Todas as regras declaradas a partir deste ponto serão voltadas para este site com telas mobile/pequenas
+
+   Posteriormente, criaremos as medias queries com somente os ajustes necessários para a exibição de telas grandes/desktop
+
+   OBS: regras criadas nesta abordagem, também serão válidas para site como um todo, ou seja, independente de tamanho da tela que será exibido. 
+*/
+
+/* Regras do topo*/
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url(../imagem/hypnotize.png) ;
+    background-attachment: fixed;
+    margin: 0 ;
+    padding: 0 ;
+    width: 100% ;
+}
+
+h1, h2, h3, h4, p, figure{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+#topo{
+    background-color: green; 
+    border-bottom: solid 1px ;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h1 img{ 
+    margin-top: 5px;
+    width: 200px ;
+}
+
+nav{
+    min-height: 40px ;
+    display: flex ;
+    justify-content: center;
+    align-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 40px;
+    padding-left: 1%;
+}
+
+nav a:link, nav a:visited{
+    text-decoration: none;
+    color: white;
+    transition: background-color 1s;
+    padding: 14px 25px;
+    min-height: inherit; /*  inherit- significa que esta herdando o valor da tag pai */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23%;
+}
+
+nav a:hover, nav a:focus{
+    background-color: rgb(238, 183, 81);
+    color: black;
+    transition: background-color 1s;
+    border-radius: 8%;
+}
+
+
+
+/* Regras do rodapé */
+.rodape{
+    border-top: solid greenyellow 5px;
+    background-color: black;
+    color: #7f7f80;
+    text-align: center;
+    width: 100%;
+}
+
+.rodape p{
+    font-size: 14px;
+}
+.rodape aside{
+    margin: 25px;
+}
+.rodape img{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.rodape-conteudo{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.rodape-conteudo ul{
+    list-style: none;  
+}
+
+#logo-rodape{
+    min-width: 146px;
+    width: 150px;
+    margin-top: 42px;
+    margin-left: 10px;
+}
+.menu-rodape a{
+    text-decoration: none;
+    color: gray;
+}
+
+.meu-rodape a:hover{
+    color: aliceblue;
+}
+
+
+.redes img{
+    min-width: 35px;
+    width: 35px;
+}
+
+.redes ul{
+    display: flex;
+    text-align: center;
+}
+
+.redes li{
+    width: 15%;
+    padding: 3%;
+}
+
+.assinatura{
+    color: white;
+    background-color: gray;
+    text-align: center;
+    height: 50px; 
+}
+
+.assinatura p{
+    padding-top: 3%;
+    
+}
+/* regra para área de conteúdo principal. Definimos uma largura máxima um pouco menor do que a tela toda e centralizamos com amrgem em automática*/
+
+
+#conteudo{
+    max-width: 95%;
+    margin: auto;
+}
+
+#conteudo article{
+    background-color: white;
+    margin: 15px 0;
+    padding: 1%;
+    box-shadow: grey 1px 1px 5px;
+}
+
+#conteudo h2, #conteudo h3, #conteudo p{
+    padding: 1% 0;
+}
+
+.titulo{
+    font-size: 2em;
+    color: red;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.destaque img{
+    border-bottom: dotted #ed6d19 5px;
+}
+
+.text-destaque{
+    position: relative; 
+    background-color: aliceblue;
+    height: 80px;
+    bottom: 140px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.text-destaque h2{
+    color: black !important; 
+    margin-top: 5px;
+    padding: 5px 0 3px 50px;
+}
+
+.text-destaque p{
+    margin-top: 5px;
+    font-size: 1.1em;
+    padding: 0 0 5px 50px;
+}
+
+#frase{
+    color: aliceblue;
+    background-color: #ed6d19;
+    text-align: center;
+    height: 80px;
+}
+
+#frase p{
+    font-size: 1em;
+    padding: 12px;
+}
+
+/* Regras para os articles contidos no #conteudo */
+
+.card{
+    margin: 15px 0;
+    padding: 5%;
+}
+
+.card-conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card p{
+    text-align: center;
+    padding: 1% 0 2 0;
+}
+
+.card-conteudo figure{
+   margin: 1%;
+   position: relative;
+   box-shadow: grey 1px 1px 5px;
+}
+
+.card-conteudo figcaption{
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    background-color: rgba(127,127,128, 0.8);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: uppercase; 
+}
+
+
+
+.card-conteudo figure img{
+    transition: 1s;
+    filter:opacity(1);
+ }
+
+.card-conteudo a:hover img, .card-conteudo a:focus img{
+    filter: opacity(0.6);
+
+}
+
+#titulo-video{
+    color: #fff;
+    padding: 15px;
+
+}
+
+#video{
+
+    width: 100%;
+    background-color: rgba(6, 99, 46, 0.5);
+    text-align: center;
+
+}
+
+iframe{
+   margin: auto;
+   max-width: 80%;
+   display: block;
+   padding: 20% 0;
+
+}
+
+.card-conteudo figure img{
+    transition: 1s;
+    filter: opacity(1);
+}
+
+.card-conteudo a:hover img, .card-conteudo a:focus img{
+    filter: opacity(0.6);
+
+}
+
+#titulo-video{
+    color: #fff;
+    padding: 15px;
+}
+
+#video{
+    width: 100%;
+    background-color: rgba(6, 99, 46, 0.5);
+    text-align: center;
+}
+
+iframe{
+   margin: auto;
+   max-width: 80%;
+   display: block;
+   padding: 20% 0;
+}
+
+/* Regras para Formularios */
+
+#form-contato{
+    margin: auto;
+    max-width: 700px;
+    display: block;
+    padding: 20% 0;
+}
+
+#form-contato input, #form-contato textarea{
+    border: solid 2px black;
+}
+
+#form-contato textarea{
+    width: 98%;
+    padding: 1%; 
+}
+
+/* Regra para o label (rótulo dos campos)*/
+
+#form-contato label{
+    font-weight: bold;
+}
+
+#form-contato button{
+    border: none;
+    padding: 2%;
+    background-color:black ;
+    color: white;
+}
+#form-contato button:houver,
+#form-contato button:focus{
+    background-color: #ed6d19;
+    cursor: pointer;
+}
+
+.conteudo-info p{
+    margin:5% ;
+}
+
+
+
+
+/* Página Pacotes */
+#card-pacote{
+    background-color: #198759;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-pacote-info{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1%;
+    box-shadow: grey 1px 1px 5px;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.pac-fotos, .pac-reserva{
+    background-color: #a98e12;
+    color: #000;
+    width: 80px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.pac-flex{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    gap: 20px;
+}
+
+ 
+
+.pac-fotos a:hover, .pac-reserva a:hover{
+    background-color: #ecda87;
+    color: #fff;
+    transition: background-color 1s;
+    border-radius: 5%;
+}
+
+ 
+
+.pac-fotos a:link, .pac-reserva a:link, .pac-fotos a:visited, .pac-reserva a:visited{
+    color: #000;
+    transition: background-color 0.5s;
+    min-height: inherit;
+    padding: 1px 8px;
+    text-decoration: none;
+}
